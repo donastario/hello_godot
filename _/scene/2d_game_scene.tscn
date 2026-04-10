@@ -1,11 +1,155 @@
 [gd_scene format=3 uid="uid://07d0krig77s3"]
 
 [ext_resource type="PackedScene" uid="uid://crmy7gb52mx12" path="res://_/scene/character_body_2d.tscn" id="1_38was"]
+[ext_resource type="Texture2D" uid="uid://d0td53iglmc14" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_wvbhr"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_38was"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q80xh"]
+texture = ExtResource("2_wvbhr")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0.17985916, -8, -0.8992939)
+11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.5756197, 8, -5.755479, 8, 1.0791531, -8, 0.8992939)
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ownep"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_q80xh")
 
 [node name="game" type="Node2D" unique_id=1111388163]
 position = Vector2(0, -1)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1563290220]
+tile_set = SubResource("TileSet_ownep")
+format = 2
+layer_0/tile_data = PackedInt32Array(524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524295, 0, 0, 524294, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 327695, 0, 0, 327696, 0, 0, 393226, 0, 0, 393228, 0, 0, 524305, 589824, 0, 524306, 655360, 0, 524307, 655360, 0, 524308, 655360, 0, 524309, 720896, 0, 524310, 0, 0, 589847, 0, 0, 655384, 0, 0, 589846, 65536, 0, 655382, 65536, 0, 655383, 65536, 0)
 
 [node name="player" parent="." unique_id=893361696 instance=ExtResource("1_38was")]
 position = Vector2(96, 116)
@@ -13,9 +157,3 @@ position = Vector2(96, 116)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1543306962]
 position = Vector2(98, 109)
 zoom = Vector2(4, 4)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1130627012]
-position = Vector2(96, 126)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2048323541]
-shape = SubResource("WorldBoundaryShape2D_38was")
