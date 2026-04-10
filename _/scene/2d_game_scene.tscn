@@ -18,11 +18,11 @@ texture = ExtResource("2_wvbhr")
 8:0/0 = 0
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:0/0 = 0
-9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.115196, 8, -8, 8, -1.7985859, -8, 0.17985916)
 10:0/0 = 0
-10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0.17985916, -8, -0.8992939)
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.115196, 8, -8, 8, -1.7985859, -8, 0.17985916)
 11:0/0 = 0
-11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.5756197, 8, -5.755479, 8, 1.0791531, -8, 0.8992939)
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -5.5756197, 8, 0.35971832, -8, -0.8992939)
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -34,6 +34,7 @@ texture = ExtResource("2_wvbhr")
 8:1/0 = 0
 9:1/0 = 0
 10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.935337, 8, -8, 8, -1.6187286, -8, 0.5395775)
 11:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
@@ -154,6 +155,7 @@ layer_0/tile_data = PackedInt32Array(524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 5
 [node name="player" parent="." unique_id=893361696 instance=ExtResource("1_38was")]
 position = Vector2(96, 116)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1543306962]
-position = Vector2(98, 109)
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1543306962]
+position = Vector2(2, -7)
 zoom = Vector2(4, 4)
+position_smoothing_enabled = true
