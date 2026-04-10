@@ -34,11 +34,17 @@ animations = [{
 "texture": SubResource("AtlasTexture_hfgrs")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 10.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=893361696]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=594832214]
+position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_8id7t")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.34326667
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=311636266]
