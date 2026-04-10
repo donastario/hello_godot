@@ -150,13 +150,51 @@ texture = ExtResource("2_wvbhr")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q80xh")
 
+[sub_resource type="Animation" id="Animation_ownep"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, 165)]
+}
+
+[sub_resource type="Animation" id="Animation_q80xh"]
+resource_name = "move_plateform"
+length = 1.0666667
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(416, 165), Vector2(496, 165)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ownep"]
+_data = {
+&"RESET": SubResource("Animation_ownep"),
+&"move_plateform": SubResource("Animation_q80xh")
+}
+
 [node name="game" type="Node2D" unique_id=1111388163]
 position = Vector2(0, -1)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1563290220]
 tile_set = SubResource("TileSet_ownep")
 format = 2
-layer_0/tile_data = PackedInt32Array(524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524295, 0, 0, 524294, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 327695, 0, 0, 327696, 0, 0, 393226, 0, 0, 393228, 0, 0, 524305, 589824, 0, 524306, 655360, 0, 524307, 655360, 0, 524308, 655360, 0, 524309, 720896, 0, 524310, 0, 0, 589847, 0, 0, 655384, 0, 0, 589846, 65536, 0, 655382, 65536, 0, 655383, 65536, 0)
+layer_0/tile_data = PackedInt32Array(524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524295, 0, 0, 524294, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 327695, 0, 0, 327696, 0, 0, 393226, 0, 0, 393228, 0, 0, 524305, 589824, 0, 524306, 655360, 0, 524307, 655360, 0, 524308, 655360, 0, 524309, 720896, 0, 524310, 0, 0, 589847, 0, 0, 655384, 0, 0, 589846, 65536, 0, 655382, 65536, 0, 655383, 65536, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655395, 0, 0)
 
 [node name="player" parent="." unique_id=893361696 instance=ExtResource("1_38was")]
 position = Vector2(96, 116)
@@ -168,3 +206,9 @@ position_smoothing_enabled = true
 
 [node name="platform" parent="." unique_id=681697208 instance=ExtResource("3_q80xh")]
 position = Vector2(185, 62)
+
+[node name="platform2" parent="." unique_id=233570925 instance=ExtResource("3_q80xh")]
+position = Vector2(416, 165)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platform2" unique_id=339844267]
+libraries/ = SubResource("AnimationLibrary_ownep")
